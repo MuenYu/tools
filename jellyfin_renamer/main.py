@@ -14,6 +14,7 @@ if not os.path.exists(path):
 
 project = path.split(os.sep)[-1]
 
+command_list = []
 for path, dir_list, _ in os.walk(path):
     for dir_name in dir_list:
         if dir_name.startswith('Season'):
@@ -32,4 +33,13 @@ for path, dir_list, _ in os.walk(path):
                 print('rename', os.path.join(path, dir_name, file), '→', os.path.join(path, dir_name, new_name))
                 last_suffix = suffix
                 count += 1
-                os.rename(os.path.join(path, dir_name, file), os.path.join(path, dir_name, new_name))
+                command_list.append((os.path.join(path, dir_name, file), os.path.join(path, dir_name, new_name)))
+print('-------------------')
+s = input('input q to quit or other to continue:')
+if s == 'q':
+    print('canceled')
+    exit(0)
+print('-------------------')
+for item in command_list:
+    os.rename(item[0], item[1])
+print('Done! totally rename', len(command_list), 'files')
