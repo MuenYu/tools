@@ -3,6 +3,7 @@
 
 # 目录
 1. [jellyfin 批量重命名](./jellyfin_renamer/)
+2. [pte 成绩单弱项分析](./pte_analyzer/)
 
 ## 命名格式
 1. 每个脚本名称为 `main.py`
