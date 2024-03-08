@@ -4,6 +4,7 @@
 # 目录
 1. [jellyfin 批量重命名](./jellyfin_renamer/)
 2. [pte 成绩单弱项分析](./pte_analyzer/)
+3. [Anki 词卡生成](./anki-pot-parser/)
 
 ## 命名格式
 1. 每个脚本名称为 `main.py`
@@ -15,5 +16,5 @@
 ```
 shell_name
 ├─main.py
-└─README.py
+└─README.md
 ```
